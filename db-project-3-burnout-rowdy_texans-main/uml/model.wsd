@@ -1,0 +1,21 @@
+@startuml
+
+entity BurnoutQuestion {
+    number
+    description
+}
+
+entity Surveyee {
+    email
+    name
+}
+
+entity Result {
+    date
+    rate
+}
+
+Result "n" --> "1" BurnoutQuestion : burnout_question
+Result "n" --> "1" Surveyee : surveyee
+
+@enduml
